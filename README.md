@@ -3,7 +3,7 @@ Restberry-Passport-Facebook
 
 [![](https://img.shields.io/npm/v/restberry-passport-facebook.svg)](https://www.npmjs.com/package/restberry-passport-facebook) [![](https://img.shields.io/npm/dm/restberry-passport-facebook.svg)](https://www.npmjs.com/package/restberry-passport-facebook)
 
-Passport-facebook wrapper for Restberry.
+Restberry Passport wrapper for passport-facebook.
 
 ## Install
 
