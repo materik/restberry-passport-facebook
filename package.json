@@ -1,0 +1,36 @@
+{
+    "author": {
+        "name": "Mattias Eriksson",
+        "email": "thematerik@gmail.com"
+    },
+    "bugs": {
+        "url": "https://github.com/materik/restberry-passport-facebook/issues"
+    },
+    "contributors": [
+        {
+            "name": "Mattias Eriksson",
+            "email": "thematerik@gmail.com"
+        }
+    ],
+    "dependencies": {
+        "passport-facebook": "2.0.x",
+        "restberry-errors": "1.0.x",
+        "restberry-logger": "1.0.x",
+        "underscore": "1.8.x"
+    },
+    "description": "Passport-facebook wrapper for Restberry",
+    "homepage": "http://restberry.com",
+    "keywords": [
+        "facebook",
+        "passport",
+        "restberry"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "restberry-passport-facebook",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/materik/restberry-passport-facebook.git"
+    },
+    "version": "1.0.0"
+}
