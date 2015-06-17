@@ -66,7 +66,6 @@ RestberryPassportFacebook.prototype.enable = function(next) {
 };
 
 RestberryPassportFacebook.prototype.findOrCreateUser = function(profile, next) {
-console.log(profile)
     var data = {
         email: profile.email,
         ids: {
@@ -86,8 +85,7 @@ console.log(profile)
     };
     var User = this.restberry.auth.getUser();
     User.findOne(query, function(user) {
-        user.set(data);
-        user.save(function(user) {
+        user.update(data, function(user) {
             next(undefined, user);
         });
     }, function() {
@@ -118,8 +116,8 @@ RestberryPassportFacebook.prototype.setupRoutes = function() {
         .addCustomRoute({
             _controller: function() {
                 return function(req, res, next) {
-                    logger.info('SESSION', 'facebook login', req.user.getId());
-                    req.user.set('timestampLastLogIn', new Date());
+                    logger.info('SESSION', 'facebook login', req.user.id);
+                    req.user.timestampLastLogIn = new Date();
                     req.user.save(function(user) {
                         res.redirect(self.returnURL);
                         logger.res(res, self.returnURL);
